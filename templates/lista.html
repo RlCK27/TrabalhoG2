@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Lista de curriculos</title>
+    </head>
+
+    <body>
+        
+        <h1>Curriculos cadastrados<h1>
+
+            {% for curriculo in curriculos %}
+
+            <p>
+                
+                <a href="/consulta/{{curriculo[0]}}">
+                    {{curriculo[1]}}
+                </a>
+                -
+                {{curriculo[2]}}
+            </p>
+
+            {% endfor %}
+
+            <br><br>
+            <a href="/">Voltar para página inicial</a>
+    
+    </body>
+
+</html>
