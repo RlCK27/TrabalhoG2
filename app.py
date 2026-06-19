@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.after_request
 def adicionar_csp(response):
     
-    response.headers["Content-Security-Police"] = ("default-src 'self'; " "script-src 'self'; ")
+    response.headers["Content-Security-Policy"] = ("default-src 'self'; " "script-src 'self'; ")
 
     response.headers["Cache-Control"] = "no-store"
 
